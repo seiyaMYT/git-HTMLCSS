@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #6c6b6b;
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+a {
+  text-decoration:none;
+}
+
+/* header */
+header {
+  width: 100%; /* 横幅100% */
+  height:100px;/* 高さ100px */
+  margin: 0 auto;
+  text-align: center;/*見出しとナビゲーションは中央寄せ。*/
+  background-color: darkgreen;
+}
+
+.head-title, .nav-item {
+color: #fff; /*ヘッダ領域の文字色は#fffを設定。*/
+}
+
+.head-title {
+padding-top:10px;/* 見出しの上部に10pxの余白を設定。 */
+}
+
+.head-title a {
+  color: #fff;
+}
+
+header nav {
+  margin:10px 0; /*ナビゲーション領域の上下に10pxの余白を設定。*/
+}
+
+.nav-list {
+  margin: 0 auto;
+}
+
+
+.nav-item {
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+  margin:0 20px; /*ナビゲーション項目はそれぞれ左右に20pxの余白を設定。*/
+}
+
+.nav-item a {
+  color: #38b48b;
+}
+
+/* main */
+main {
+  /* width: 90%; 横幅90% */
+  /* margin: 0 auto; 中央寄せ（左右に余白がないとできない） */
+  padding: 10px 40px 40px 40px; /*上部に10px、左右下に40pxの内側余白*/
+  background-color:#ecfcdf;
+}
+
+.main-title {
+  text-align: center;
+  margin:0 auto 10px auto;
+}
+
+.main-content {
+  display: flex;/*画像領域と自己紹介領域はflexboxを使用し*/
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  margin: 0 auto;/*、左右中央寄せにする。*/
+}
+
+.main-img {
+  display: inline-block;
+  /* box-sizing: border-box; */
+  margin-right:10px;/*右側外部余白を10pxとする。*/
+  width: 30%;/*画像領域は横幅を30%とし、*/
+}
+
+.main-img img {
+  width: 100%;/*画像は横幅を100%*/
+  border-radius: 10px;/*角を10px丸くする。*/
+}
+
+.main-intro {
+  background-color: #fff;
+  border-radius: 10px; /*角丸：10px*/
+  width:70%;/*横幅：70%*/
+  padding:0 10px;/*左右内部余白：10px*/
+}
+
+.main-info {
+  display: flex;
+  flex-wrap: nowrap;
+  line-height: 40px;/*自己紹介文の１行の高さは40pxとする。*/
+}
+
+.info-title {
+  width: 100px;/*Birthdayなどの自己紹介文の見出し項目は横幅100px*/
+}
+
+.main-info .fab {
+  margin:0 20px 20px 0;/*ソーシャルアイコンは右と下に20pxの外部余白を設定する。*/
+}
+
+/* footer */
+footer {
+  width: 100%; /* 横幅いっぱい */
+  height: 100px; /* 高さ100px */
+  text-align: center;
+  background-color: darkgreen;
+}
+
+.footer-text {
+  line-height: 100px;
+  color: #fff;
+}
+
+/* レスポンシブ対応 */
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    display: block;/*画像領域と自己紹介文領域の横並びを解除。*/
+  }
+
+  .main-img {
+    width: 100%;/*画像領域は横幅を100%*/
+  }
+
+  .main-intro {
+    width: 100%;
+ }
+}
